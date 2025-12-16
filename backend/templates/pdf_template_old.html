@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Aramex Bill of Lading</title>
+
+  <style>
+    body {
+      font-family: "RedHatDisplay", sans-serif;
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .document {
+      border: 0.5px solid #E5E5E5;
+      padding: 5px;
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    td {
+      vertical-align: middle;
+      /* padding: 2px; */
+      font-size: 10px;
+    }
+
+    .header-table {
+  border: none;
+  /* margin: 20px auto !important; /* Add spacing above and below */  
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header-table td {
+  vertical-align: middle;
+  /* padding: 5px 10px; */
+}
+
+.logo-cell {
+  width: 25%;
+  text-align: left;
+  margin-top: 10px !important;
+}
+
+.title-cell {
+  width: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bol-cell {
+  width: 25%;
+  text-align: right;
+  font-size: 14px;
+}
+
+
+    .title-cell {
+      width: 50%;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .bol-cell {
+      width: 25%;
+      text-align: right;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .section-title {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      border: 0.5px solid #E5E5E5;
+      text-align: center;
+      padding-bottom: 10px !important;
+      /* padding: 2px !important; */
+      color: #1A1A1A;
+      font-size: 10px;
+      vertical-align: middle;
+    }
+
+    .label {
+      font-weight: bold;
+      width: 36%;
+      padding: 2px !important;
+      font-size: 10px;
+    }
+
+    .border-right {
+      border: 0.5px solid #E5E5E5;
+    }
+
+    .border-top {
+      border: 0.5px solid #E5E5E5;
+      margin-top:5px !important;
+      padding-top: 5px !important;
+    }
+
+    .data-table {
+      margin: 0;
+    }
+    .table-margin-top{
+      margin-top: 5px !important;
+    }
+    .table-margin-bottom {
+      margin-bottom: 5px !important;
+    }
+    .full-border{
+      border: 0.5px solid #E5E5E5;
+      margin-top: 5px !important;
+      padding-top: 5px !important;
+    }
+
+    .data-table td {
+      padding: 2px;
+      line-height: 10px;
+      /* line-height: 1.2; */
+    }
+
+    .data-table tr {
+      margin: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .emergency-text {
+      font-size: 9px;
+      line-height: 1.2;
+      border: 0.5px solid #E5E5E5;
+      background-color: #f0f0f0;
+      padding: 20px 10px 8px 8px;
+      /* margin: 5px 0; */
+      box-sizing: border-box;
+      width: auto;
+    }
+
+    .special-title {
+      font-weight: bold;
+      margin-top: 5px;
+      font-size: 10px;
+    }
+
+    .special-instructions {
+      padding: 0px 5px;
+      font-size: 10px;
+    }
+
+    .carrier-table-container {
+      /* page-break-inside: avoid; */
+      margin-top: 5px;
+    }
+
+    .page-section {
+      page-break-inside: avoid;
+    }
+  
+    table.carrier-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 0.5px solid #E5E5E5;
+      font-size: 10px;
+      page-break-inside: avoid;
+    }
+
+    table.carrier-table th,
+    table.carrier-table td {
+      border: 0.5px solid #E5E5E5;
+      padding: 2px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10px;
+    }
+
+    table.carrier-table th {
+      font-weight: bold;
+      -pdf-keep-with-next: always;
+    }
+
+    .commodity-header {
+      text-align: center;
+      font-weight: bold;
+      width: 30%;
+    }
+
+    .carrier-note-table,
+    .signature-table {
+      margin-top: 5px;
+      font-size: 10px;
+      border: 0.5px solid #E5E5E5 !important;
+    }
+
+    .carrier-note-table td,
+    .signature-table td {
+       padding: 0px 5px;
+    }
+    .carrier-info-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .carrier-info-table th,
+    .carrier-info-table td {
+      border: 0.5px solid #E5E5E5;
+      padding: 2px;
+      text-align: center;
+    }
+
+    .carrier-info-table th {
+      background-color: #f2f2f2;
+    }
+
+    .commodity-text {
+      text-align: start;
+      font-size: 10px;
+      font-weight: normal;
+      padding: 2px;
+    }
+
+    .col-type {
+      width: 8%;
+    }
+
+    .col-qty {
+      width: 5%;
+    }
+
+    .col-mass {
+      width: 8%;
+    }
+
+    .col-package {
+      width: 8%;
+    }
+
+    .col-weight {
+      width: 10%;
+    }
+
+    .col-hm {
+      width: 5%;
+    }
+
+    .col-commodity {
+      width: 36%;
+    }
+
+    .col-ol {
+      width: 10%;
+    }
+
+    .col-cc {
+      width: 10%;
+    }
+
+    .logo-cell img {
+      /* width: 80px;
+      height: auto;
+      object-fit: cover; */
+    }
+
+    .blank-row {
+      background-color: #f2f2f2;
+    }
+
+    @page {
+      size: letter portrait;
+      margin: 0.5cm;
+    }
+
+    .signature-section {
+      page-break-before: auto;
+    }
+
+    .note-text {
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .signature-line {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="document">
+
+    <!-- Header -->
+    <table class="header-table">
+      <tr>
+        <td class="logo-cell">
+          <img src="data:image/png;base64,{{ logo_base64 }}" alt="logo" style="max-height: 70px; height: auto;" />
+        </td>
+        <td class="title-cell">BILL OF LADING</td>
+        <td class="bol-cell">{{ consignment_id }}</td>
+      </tr>
+    </table>
+
+    <!-- Main Content Two Columns -->
+    <table>
+      <tr>
+        <!-- Left Column -->
+        <td class="border-right" width="50%">
+          <table class="data-table">
+            <tr>
+              <td colspan="4" class="section-title">SHIP FROM</td>
+            </tr>
+            <tr>
+              <td style="padding-top: 5px; padding-left: 5px;" class="label">Location #</td>
+              <td style="padding-top: 5px;"> {{ ship_from.address_name}} </td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Supplier Name</td>
+              <td>{{ ship_from.name}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Address</td>
+              <td>{{ ship_from.address}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Address2</td>
+              <td>{{ ship_from.address2}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">City/State/Zip</td>
+              <td>{{ ship_from.location}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-bottom: 5px; padding-left: 5px;">Lat/Lon</td>
+              <td style="padding-bottom: 5px;">{{ ship_from.lat_lon}}</td>
+            </tr>
+
+          </table>
+            <table class="data-table table-margin-top table-margin-bottom">
+              <tr>
+              <td colspan="2" class="section-title">SHIP TO</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-top: 5px; padding-left: 5px;">Location #</td>
+              <td style="padding-top: 5px;">{{ ship_to.address_name}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Client Name</td>
+              <td>{{ ship_to.name }}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Address</td>
+              <td>{{ ship_to.address}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Address2</td>
+              <td>{{ ship_to.address2}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">City/State/Zip</td>
+              <td>{{ ship_to.location}}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-bottom: 5px; padding-left: 5px;">Lat/Lon</td>
+              <td style="padding-bottom: 5px;">{{ ship_to.lat_lon}}</td>
+            </tr>
+            </table>
+            
+           
+          <!-- <div style="height: 50px;"></div> -->
+        </td>
+
+        <!-- Right Column -->
+        <td width="50%" class="full-border">
+          <table class="data-table table-margin-top ">
+            <tr>
+              <td class="label" style="padding-top: 5px; padding-left: 5px;">Bill of Lading No</td>
+              <td style="padding-top: 5px;">{{ consignment_id }}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">PO Number</td>
+              <td style="padding-top: 5px;">{{ po_number }}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Carrier Name</td>
+              <td style="padding-top: 5px;">{{ carrier_name }}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Consignment ID</td>
+              <td style="padding-top: 5px;">{{ consignment_id }}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Billable Miles</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Ordered By</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Ordered By Email</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-bottom: 5px; padding-left: 5px;">Ordered Date</td>
+              <td style="padding-bottom: 5px;">-</td>
+            </tr>
+            </table>
+            <table class="table-margin-top">
+              <tr class="border-top" style="border-bottom: none;border-right: none; border-left: none;">
+                <td class="label" style="padding-top: 5px; padding-left: 5px;">SCAC</td>
+                <td style="padding-top: 5px;">{{ scac }}</td>
+              </tr>
+              <tr>
+                <td class="label" style="padding-left: 5px;">MC/DOT #</td>
+                <td>{{ mc_dot }}</td>
+              </tr>
+              <tr>
+                <td class="label" style="padding-bottom: 5px; padding-left: 5px;">Pro Number</td>
+                <td style="padding-bottom: 5px;">-</td>
+              </tr>
+
+            </table>
+            <table class="data-table table-margin-top">
+
+              <tr class="border-top" style="border-bottom: none;border-right: none; border-left: none;">
+                <td class="label" style="padding-top: 5px; padding-left: 5px;">Freight Terms</td>
+                <td style="padding-top: 5px;">Freight charges are prepaid, unless specified otherwise</td>
+              </tr>
+              <tr><td>&nbsp;</td></tr>
+            </table>
+            
+                     
+
+          </table>
+
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <!-- Left Column -->
+        <td class="border-right" width="50%">
+
+     <table class="data-table table-margin-bottom" >
+            <tr>
+              <td colspan="2" class="section-title">THIRD PARTY FREIGHT CHARGES BILL TO</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-top: 5px; padding-left: 5px;">Name</td>
+              <td style="padding-top: 5px;">{{ freight_forwarder.name }}</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">Address</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td class="label" style="padding-left: 5px;">City/State/Zip </td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size: 10px;" style="padding: 0px 5px; padding-left: 5px;"><b>Note:</b> The Bill of Lading Number
+                must appear on the invoice</td>
+            </tr>
+      </table>
+      </td>
+
+      <td class="border-right emergency-text" width="50%" >
+
+       <table>
+                        <tr>
+                          <div  >
+                            <b>EMERGENCY CONTACT:</b><br />
+                            <b>FOR A CHEMICAL EMERGENCY (SPILL, LEAK, EXPOSURE, FIRE OR ACCIDENT)<br />
+                              CONTACT SHIPPER DAY OR NIGHT BY CALLING RESPONSE NUMBER: 281-555-3518<br />
+                              3E CONTACT NUMBER: 11042</b>
+                          </div>
+            
+                        </tr>
+                      </table>
+      </td>
+    </table>
+
+    <!-- Special Instructions -->
+    <div>
+      <table class="data-table table-margin-top" style="">
+        <tr>
+          <td class="special-title" style="padding-top: 5px;border-bottom: none;">SPECIAL INSTRUCTIONS:</td>
+        </tr>
+        <tr style="border-top: none;">
+          <td class="special-instructions">
+            {% for item in packages %}
+            {{ item }}{% if not forloop.last %} ~ {% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Carrier Information Table -->
+    <!--   style="page-break-before: always;"-->
+    <div  class="page-section">
+      <!-- style="page-break-inside: avoid;" -->
+      <div class="carrier-table-container">
+        <table class="carrier-table" style="display: table-header-group">
+          <thead style="display: table-header-group;">
+            <tr>
+              <td  colspan="9" class="section-title" style="background-color: #E5E5E5">CARRIER INFORMATION</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="width: 15%;padding: 10px;">Handling Unit</td>
+              <td rowspan="2" style="width: 10%;">Net<br>Mass</td>
+              <td rowspan="2" style="width: 10%;">Package<br>Qty</td>
+              <td rowspan="2" style="width: 10%;">Gross<br>Weight (Lbs)</td>
+              <td rowspan="2" style="width: 5%;">HM</td>
+              <td rowspan="1" style="width: 30%; padding: 5px;">Commodity Description</td>
+              <td rowspan="2" style="width: 10%;">GL Code</td>
+              <td rowspan="2" style="width: 10%;">CC Code</td>
+            </tr>
+            <tr>
+              <td style="width: 7.5%;">Type</td>
+              <td style="width: 7.5%;">Qty</td>
+              <td style="text-align: left; padding: 5px;">
+                Commodities requiring special care/attention during handling/stowing must be marked and packaged as to
+                ensure safe transportation with ordinary care. See section 2(e) of NMFC Item 360
+              </td>
+            </tr>
+          </thead>
+      
+          <!-- Data rows -->
+          <tr style="background-color: #E5E5E5;">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          {% for item in sku_data %}
+            <tr>
+              <td style="padding-bottom: 10px;">{{ item.box_type }}</td>
+              <td style="padding-bottom: 10px;">1</td>
+              <td style="padding-bottom: 10px;">-</td>
+              <td style="padding-bottom: 10px;">{{ item.sku_qty }}</td>
+              <td style="padding-bottom: 10px;">{{ item.box_weight }}</td>
+              <td style="padding-bottom: 10px;">-</td>
+              <td style="text-align: left; padding-bottom: 10px;">{{ item.description }} <br> 
+                <br>
+                {% if item.dg_class %} <span style="color: red;"> DG </span>  | {{ item.dg_class }} | {{item.dg_category}} {% endif %}
+              </td>
+              <td style="padding-bottom: 10px;"> {{ gl_account }}</td>
+              <td style="padding-bottom: 10px;">{{ cc_code|default:"-" }}</td>
+            </tr>
+          {% endfor %}
+         
+        </table>
+      </div>
+    </div>
+
+    <!-- Additional Note and Signatures -->
+    <table class="carrier-note-table" width="100%" cellpadding="2" cellspacing="0" 
+      <tr>
+        <td colspan="2"
+          style="font-size: 10px; border-top: 0.5px solid #E5E5E5; background-color: #E5E5E5; font-weight: bold; padding-top: 5px;padding-bottom: 15px; padding-left: 5px;">
+          <strong>Note:</strong> Liability Limitation for loss or damage in the shipment may be applicable. See 49 U.S.C
+          - 14706(c)(1)(A) and (B)
+        </td>
+      </tr>
+      <tr >
+        <td style="width: 50%; font-size: 10px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; vertical-align: middle;">
+          RECEIVED, subject to individually determined rates or contracts that have been agreed upon in writing between
+          the carrier and shipper and that goods have been received in undamaged condition
+          <div class="signature-line">______</div>
+          <strong>Signature</strong>
+        </td>
+        <td style="font-size: 10px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; vertical-align: middle;">
+          This is to certify that the above named materials are properly classified, described, packaged, marked and
+          labeled and are in proper condition for transportation according to the applicable regulations of the U.S.
+          DOT.
+          <div class="signature-line">______</div>
+          <strong>Shipper Signature</strong>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Signature Section -->
+    <table class="signature-table" width="100%" cellpadding="2" cellspacing="0"
+      style="font-size: 10px; font-weight: bold;border-top: none; " >
+      <tr>
+        <td width="50%" style="vertical-align: top; ">
+          Demurrage:<br>
+          Demurrage Start Time: ______ End Time: ______ Total Hours: ______
+        </td>
+        <td style="vertical-align: top;  padding-top: 5px; padding-bottom: 5px;">
+          Other Accessories:<br>
+          Type: ______ Start Time: ______ End Time: ______ Total Hours: ______<br>
+          Type: ______ Start Time: ______ End Time: ______ Total Hours: ______
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+
+</html>

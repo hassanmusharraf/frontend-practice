@@ -1,0 +1,14 @@
+For general formatting
+
+pip install autopep8
+autopep8 --in-place --recursive --ignore E501 --aggressive .
+
+For Background Task
+
+pip install celery redis
+Start Redis Server -- redis-server
+Check if redis server is running -- redis-cli ping # output:PONG
+In other terminal activate venv and run -- "celery -A core worker --loglevel=info"
+
+
+cx_Oracle

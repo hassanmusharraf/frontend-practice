@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Aramex Bill of Lading</title>
+  <style>
+    :root{
+      --border:#d1d5db;   /* gray-300 */
+      --bg-head:#f3f4f6;  /* gray-100 */
+      --text-800:#1f2937; /* gray-800 */
+      --text-600:#4b5563; /* gray-600 */
+    }
+    html, body { margin:0; padding:0; background:#fff; border-collapse: collapse !important; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--text-800); font-size: 10px; line-height: 1.35; }
+    table { width: 100%; border-collapse: collapse; }
+    .doc { padding: 8px; }
+
+    /* Header */
+    .hdr { margin: 8px 0 4px; }
+    .hdr td { vertical-align: middle; }
+    .logo { width:25%; text-align:left; }
+    .title { width:50%; text-align:center; font-weight: bold; font-size: 14px; letter-spacing: .2px; text-transform: uppercase; }
+    .bol { width:25%; text-align:right; font-weight: bold; font-size: 10px; }
+    .rule { height: 2px; background: var(--border); margin: 6px 0 8px; }
+
+    /* Panels */
+    .panel { border: 0.5px solid var(--border); }
+    .ph { background: var(--bg-head); padding: 2px 4px 10px 4px !important; 
+    border-bottom: 0.5px solid var(--border) ;
+    }
+    .ph2 {
+      background: var(--bg-head); padding: 2px 4px 10px 4px !important; 
+    border: 0.25px solid var(--border);
+    /* border-bottom: none; */
+    /* display: flex; align-items: start; */
+    }
+    .ph h2 { margin:0; font-weight: bold; color: var(--text-800); text-align: center; text-transform: uppercase; font-size: 10px; }
+    .pc { padding: 6px; }
+
+    .grid2 { display: grid; grid-template-columns: 50% 50%; gap: 6px; }
+    .cell { display: flex; flex-direction: column; gap: 2px; word-wrap: break-word; }
+    .lbl { font-weight: bold; color: var(--text-800); }
+    .val { color: var(--text-600); }
+
+    /* No inter-section vertical rule */
+    .colsplit { padding-right: 6px; }
+    .colsplit + td { padding-left: 6px; }
+
+    /* Right-side small boxes */
+    .emg { background: var(--bg-head); border: 0.5px solid var(--border); padding: 6px; font-weight: bold; color: var(--text-800); padding-bottom: 10px !important; }
+
+    /* Carrier table */
+    .ct { border: 0.25px solid var(--border); margin-top: 6px; }
+    .ct th, .ct td { border: 0.25px solid var(--border); padding: 4px; text-align: center; font-size: 10px; border-collapse: collapse; }
+    .ct th { background: var(--bg-head); font-weight: bold; color: var(--text-800); border-collapse: collapse; }
+    .ct td { color: var(--text-600); border-collapse: collapse; }
+    .ct2 { border: 0.25px solid var(--border);  }
+    .ct2 th, .ct2 td { 
+      /* border: 0.25px solid var(--border);  */
+      padding: 4px; text-align: center; font-size: 10px; border-collapse: collapse; }
+    .ct2 th { background: var(--bg-head); font-weight: bold; color: var(--text-800); border-collapse: collapse; border-bottom: 0.25px solid var(--border); }
+    .ct2 td { color: var(--text-600); border-collapse: collapse; padding-bottom: 10px; border-bottom: 0.25px solid var(--border);}
+    .ct2 th:last-child {
+      border-right:  0.25px solid var(--border);;
+    }
+    .ct2 th:first-child {
+      border-left:  0.25px solid var(--border);;
+    }
+    .ct2 td:last-child {
+      border-right:  0.25px solid var(--border);;
+    }
+    .ct2 td:first-child {
+      border-left:  0.25px solid var(--border);;
+    }
+    .desc { text-align: left; }
+    .desc-head { text-align: left !important; }
+    .th-table { padding-bottom: 10px !important; text-align: center !important; }
+
+    .w-20 { width: 120px; }
+
+    /* Post-table advisory and notes */
+    .advisory { border: 0.5px solid var(--border); background: var(--bg-head); padding: 6px; margin-top: 6px; font-weight: bold; padding-bottom: 10px !important; }
+    .advisory2 {  background: var(--bg-head); padding: 6px; margin-top: 6px; font-weight: bold; padding-bottom: 10px !important; text-align: left; border:0.25px solid var(--border); border-top:none}
+    .note { border: 0.5px solid var(--border); background: var(--bg-head); padding: 6px; margin-top: 6px; font-weight: bold; padding-bottom: 10px !important; }
+
+    /* Signatures */
+    .sigrow { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+    .sigbox { border: 0.5px solid var(--border); padding: 8px; }
+    .sigline { margin-top: 10px; border-top: 1px solid var(--border); height: 1px; }
+    .siglabel { margin-top: 6px; font-weight: bold; }
+
+    /* Bottom panels */
+    .bottomrow { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+    .bottombox { border: 0.5px solid var(--border); padding: 8px; }
+    .dash { display:inline-block; min-width: 40px; border-bottom: 1px solid var(--text-800); vertical-align: middle; }
+
+    @page { size: letter portrait; margin: 0.5cm; }
+    .avoid-break { page-break-inside: avoid; }
+  </style>
+</head>
+<body>
+
+  
+  <div class="doc">
+
+    <!-- Header -->
+    <table class="hdr">
+      <tr>
+        <td class="logo"><img src="data:image/png;base64,{{ logo_base64 }}" alt="logo" style="max-height:64px;"></td>
+        <td class="title">BILL OF LADING</td>
+        <td class="bol">{{ consignment_id }}</td>
+      </tr>
+    </table>
+    <div class="rule"></div>
+
+  <!-- <div> -->
+
+    
+    <!-- Top row -->
+    <table style="margin-bottom:8px;">
+      <tr>
+        <td class="colsplit" style="width:50%; vertical-align: top;">
+          <div class="panel">
+            <div class="ph"><h2>SHIP FROM</h2></div>
+            <div class="pc">
+              <div class="grid2">
+                <div class="cell"><div class="lbl">Location #:</div><div class="val">{{ ship_from.address_name }}</div></div>
+                <div class="cell"><div class="lbl">Name:</div><div class="val">{{ ship_from.name }}</div></div>
+                <div class="cell"><div class="lbl">Address:</div><div class="val">{{ ship_from.address }}</div></div>
+                <div class="cell"><div class="lbl">City/State/Zip:</div><div class="val">{{ ship_from.location }}</div></div>
+                <div class="cell"><div class="lbl">Lat/Lon:</div><div class="val">{{ ship_from.lat_lon }}</div></div>
+                <div class="cell"></div>
+              </div>
+            </div>
+          </div>
+        </td>
+      <!-- </tr> -->
+          <!-- <tr> -->
+            
+            <td style="width:50%; padding-left:6px; vertical-align: top;">
+              <div class="panel">
+                <div class="ph"><h2>SHIP TO</h2></div>
+                <div class="pc">
+                  <div class="grid2">
+                    <div class="cell"><div class="lbl">Location #:</div><div class="val">{{ ship_to.address_name }}</div></div>
+                    <div class="cell"><div class="lbl">Name:</div><div class="val">{{ ship_to.name }}</div></div>
+                    <div class="cell"><div class="lbl">Address:</div><div class="val">{{ ship_to.address }}</div></div>
+                    <div class="cell"><div class="lbl">City/State/Zip:</div><div class="val">{{ ship_to.location }}</div></div>
+                    <div class="cell"><div class="lbl">Lat/Lon:</div><div class="val">{{ ship_to.lat_lon }}</div></div>
+                    <div class="cell"></div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+    </table>
+
+    <!-- Second row -->
+    <table>
+      <tr>
+        <td class="colsplit" style="width:50%; vertical-align: top;">
+          <div class="panel">
+            <div class="pc">
+              <div class="grid2">
+                <div class="cell"><div class="lbl">Bill of Lading No:</div><div class="val">{{ consignment_id }}</div></div>
+                <div class="cell"><div class="lbl">PO Number:</div><div class="val">{{ po_number }}</div></div>
+                <div class="cell"><div class="lbl">Carrier Name:</div><div class="val">{{ carrier_name }}</div></div>
+                <div class="cell"><div class="lbl">Equipment Type:</div><div class="val">{{ equipment_type|default:"-" }}</div></div>
+                <div class="cell"><div class="lbl">Billable Miles:</div><div class="val">{{ billable_miles|default:"-" }}</div></div>
+                <div class="cell"><div class="lbl">Ordered By:</div><div class="val">{{ ordered_by|default:"-" }}</div></div>
+                <div class="cell"><div class="lbl">SCAC:</div><div class="val">{{ scac }}</div></div>
+                <div class="cell"><div class="lbl">MC/DOT #:</div><div class="val">{{ mc_dot }}</div></div>
+                <div class="cell"><div class="lbl">Pro Number:</div><div class="val">{{ pro_number|default:"-" }}</div></div>
+                <div class="cell"><div class="lbl">Routing ID:</div><div class="val">{{ routing_id|default:"-" }}</div></div>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td style="width:50%; padding-left:6px; vertical-align: top;">
+          <div class="panel" style="margin-bottom:6px;">
+            <div class="pc">
+              <div class="lbl">Freight Charge Terms:</div>
+              <div class="val">Freight charges are prepaid, unless specified otherwise</div>
+            </div>
+          </div>
+          <div class="emg">
+            EMERGENCY CONTACT:<br/>
+            FOR A CHEMICAL EMERGENCY (SPILL, LEAK, EXPOSURE, FIRE OR ACCIDENT)<br/>
+            CONTACT SHIPPER DAY OR NIGHT BY CALLING RESPONSE NUMBER 281-555-3518 3E CONTACT NUMBER 11042
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Third Party Freight Charges Bill To (aligned full-width) -->
+    <table style="margin-top:6px;">
+      <tr>
+        <td>
+          <div class="panel">
+            <div class="ph"><h2>THIRD PARTY FREIGHT CHARGES BILL TO</h2></div>
+            <div class="pc">
+              <div class="grid2" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="cell"><div class="lbl">Name:</div><div class="val">{{ freight_forwarder.name }}</div></div>
+                <div class="cell"><div class="lbl">Address:</div><div class="val">{{ freight_forwarder.address|default:"-" }}</div></div>
+                <div class="cell"><div class="lbl">City/State/Zip:</div><div class="val">{{ freight_forwarder.city_state_zip|default:"-" }}</div></div>
+                <div class="cell"><div class="lbl">Note:</div><div class="val">The Bill of Lading Number must appear on the invoice</div></div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Carrier Information Table -->
+    <!-- <div class="avoid-break" style="margin-top:6px;">
+      <table class="ct">
+        <thead>
+          <tr>
+            <th class="th-table" >Type &amp; Dimensions</th>
+            <th class="th-table" >Net <br> Mass</th>
+            <th class="th-table" >Gross <br> Wt</th>
+            <th class="desc-head th-table" style="text-align:left;">Commodity Description</th>
+            <th class="th-table" >Packaged Qty &amp; <br> UOM</th>
+            <th class="w-20 th-table" >GL Code</th>
+            <th class="w-20 th-table">CC Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in sku_data %}
+          <tr>
+            <td style="text-align:center;">
+              <div class="lbl" style="font-weight:bold; color:var(--text-800);">{{ item.box_type }}</div>
+              <div style="color:#6b7280;">{{ item.dimensions|default:"-" }}</div>
+            </td>
+            <td >{{ item.net_mass|default:"-" }}</td>
+            <td >{{ item.box_weight }}</td>
+            <td class="desc" style="text-align: left;">
+              {{ item.description }}
+              {% if item.dg_class %}<br/><span style="color:#b91c1c; font-weight:bold;">DG</span> | {{ item.dg_class }} | {{ item.dg_category }}{% endif %}
+            </td>
+            <td >{{ item.sku_qty }}{% if item.uom %} {{ item.uom }}{% endif %}</td>
+            <td >{{ gl_account }}</td>
+            <td>{{ item.cc_code|default:"-" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div> -->
+
+    <!-- Post-table advisory -->
+    <!-- <div class="advisory">
+      Commodities requiring special care/attention during handling/stowing must be marked and packaged as to ensure safe transportation with ordinary care. See section 2(e) of NMFC Item 360
+    </div> -->
+
+          {% for package in packages %}
+          <div class="ph2" style="margin-top:6px;">
+           <span style="font-weight: 700;">{{package.summary.package_id}}</span> - {{package.summary.package_type}} | {{package.summary.dimensions}} | {{package.summary.weight}} {{package.summary.weight_unit }}
+          </div>
+        <!-- <div class="avoid-break" style="margin-top:6px;"> -->
+      <table class="ct2">
+        <thead>
+          <tr>
+            <!-- <th class="th-table" >Type &amp; Dimensions</th>
+            <th class="th-table" >Net <br> Mass</th>
+            <th class="th-table" >Gross <br> Wt</th> -->
+            <th class="desc-head th-table" style="text-align:left;">Commodity Description</th>
+            <th class="w-20 th-table" >Packaged Qty &amp; <br> UOM</th>
+            <th class="w-20 th-table" >GL Code</th>
+            <th class="w-20 th-table">CC Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in package.lines %}
+          <tr style="page-break-inside: avoid;">
+            <!-- <td style="text-align:center;">
+              <div class="lbl" style="font-weight:bold; color:var(--text-800);">{{ item.box_type }}</div>
+              <div style="color:#6b7280;">{{ item.dimensions|default:"-" }}</div>
+            </td>
+            <td >{{ item.net_mass|default:"-" }}</td>
+            <td >{{ item.box_weight }}</td> -->
+            <td class="desc" style="text-align: left;">
+              {{ item.description }}
+              {% if item.dg_class %}<br/><span style="color:#b91c1c; font-weight:bold;">DG</span> | {{ item.dg_class }} | {{ item.dg_category }}{% endif %}
+            </td>
+            <td >{{ item.sku_qty }}{% if item.uom %} {{ item.uom }}{% endif %}</td>
+            <td >{{ gl_account }}</td>
+            <td>{{ item.cc_code|default:"-" }}</td>
+          </tr>
+          {% endfor %}
+          <tr>
+
+            <td colspan="4" class="advisory2" style="text-align: left;">
+      Commodities requiring special care/attention during handling/stowing must be marked and packaged as to ensure safe transportation with ordinary care. 
+      See section 2(e) of NMFC Item 360
+  
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {% endfor %}
+
+   <!-- <div class="advisory">
+      Commodities requiring special care/attention during handling/stowing must be marked and packaged as to ensure safe transportation with ordinary care. See section 2(e) of NMFC Item 360
+    </div> -->
+
+    <!-- Liability note bar -->
+    <div class="note">
+      Note: Liability Limitation for loss or damage in the shipment may be applicable. See 49 U.S.C - 14706(c)(1)(A) and (B)
+    </div>
+
+    <!-- Signature boxes row -->
+    <div class="sigrow" style="page-break-inside: avoid;">
+      <div class="sigbox">
+        RECEIVED, subject to individually determined rates or contracts that have been agreed upon in writing between the carrier and shipper and that goods have been received in undamaged condition
+        <div class="sigline"></div>
+        <div class="siglabel">Receiver Signature</div>
+      </div>
+      <div class="sigbox">
+        This is to certify that the above named materials are properly classified, described, packaged, marked and labeled and are in proper condition for transportation according to the applicable regulations of the U.S. DOT.
+        <div class="sigline"></div>
+        <div class="siglabel">Sender's Signature</div>
+      </div>
+    </div>
+
+    <!-- Bottom panels -->
+     <div style="page-break-inside: avoid; ">
+
+    <div class="bottomrow">
+      <div class="bottombox">
+        <div class="lbl" style="margin-bottom:6px;">Demurrage:</div>
+        Start: <span class="dash">&nbsp;</span> &nbsp; End: <span class="dash">&nbsp;</span> &nbsp; Hours: <span class="dash">&nbsp;</span>
+      </div>
+      <div class="bottombox">
+        <div class="lbl" style="margin-bottom:6px;">Other Accessories:</div>
+        Type: <span class="dash"></span> &nbsp; Start: <span class="dash"></span> &nbsp; End: <span class="dash"></span> &nbsp; Hours: <span class="dash"></span><br/>
+        Type: <span class="dash"></span> &nbsp; Start: <span class="dash"></span> &nbsp; End: <span class="dash"></span> &nbsp; Hours: <span class="dash"></span><br/>
+        Type: <span class="dash"></span> &nbsp; Start: <span class="dash"></span> &nbsp; End: <span class="dash"></span> &nbsp; Hours: <span class="dash"></span>
+      </div>
+    </div>
+     </div>
+  <!-- </div> -->
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% autoescape off %}<?xml version="1.0" encoding="utf-8"?>
+<InboundDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  {% for bol in bill_of_ladings %}
+    <BillOfLading>
+      <BOLNumber>{{ bol.bol_id }}</BOLNumber>
+      <Currency>-</Currency>
+
+      <OriginAddress>
+        <Name>{{ bol.ship_from.supplier_name }}</Name>
+        <Address1>{{ bol.ship_from.address_line_1 }}</Address1>
+        <City>{{ bol.ship_from.city }}</City>
+        <ZipCode>{{ bol.ship_from.zipcode }}</ZipCode>
+        <Country>{{ bol.ship_from.country }}</Country>
+      </OriginAddress>
+
+      <DestinationAddress>
+        <Name>{{ bol.ship_to.client_name }}</Name>
+        <Address1>{{ bol.ship_to.address_line_1 }}</Address1>
+        <City>{{ bol.ship_to.city }}</City>
+        <ZipCode>{{ bol.ship_to.zipcode }}</ZipCode>
+        <Country>{{ bol.ship_to.country }}</Country>
+      </DestinationAddress>
+
+      {% comment %} <CostCenter>{{ bol.cc_code|default:"-" }}</CostCenter> {% endcomment %}
+      <GLAccount>{{ bol.gl_code }}</GLAccount>
+    
+      {% for line in bol.po_lines %}
+      <DeliveryLine>
+        <LineNumber>{{ line.reference_number }}</LineNumber>
+        <LineReference>{{ line.customer_reference_number }}</LineReference>
+        <ProductCode>{{ line.product_code }}</ProductCode>
+        <ProductDescription>{{ line.description }}</ProductDescription>
+        <CostCenter>{{ line.cc_code|default:"-" }}</CostCenter>
+        <Cube>-</Cube>
+        <OrderQuantity>{{ line.allocated_qty }}</OrderQuantity>
+      </DeliveryLine>
+      {% endfor %}
+    </BillOfLading>
+    {% endfor %}
+</InboundDelivery>
+{% endautoescape %}

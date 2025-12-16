@@ -1,0 +1,1247 @@
+[
+  {
+    "dropdown_name": "ISO2",
+    "label": "AF (Afghanistan)",
+    "value": "AF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AL (Albania)",
+    "value": "AL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "DZ (Algeria)",
+    "value": "DZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AS (American Samoa)",
+    "value": "AS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AD (Andorra)",
+    "value": "AD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AO (Angola)",
+    "value": "AO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AI (Anguilla)",
+    "value": "AI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AQ (Antarctica)",
+    "value": "AQ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AG (Antigua and Barbuda)",
+    "value": "AG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AR (Argentina)",
+    "value": "AR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AM (Armenia)",
+    "value": "AM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AW (Aruba)",
+    "value": "AW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AU (Australia)",
+    "value": "AU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AT (Austria)",
+    "value": "AT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AZ (Azerbaijan)",
+    "value": "AZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BS (Bahamas)",
+    "value": "BS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BH (Bahrain)",
+    "value": "BH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BD (Bangladesh)",
+    "value": "BD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BB (Barbados)",
+    "value": "BB"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BY (Belarus)",
+    "value": "BY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BE (Belgium)",
+    "value": "BE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BZ (Belize)",
+    "value": "BZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BJ (Benin)",
+    "value": "BJ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BM (Bermuda)",
+    "value": "BM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BT (Bhutan)",
+    "value": "BT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BO (Bolivia, Plurinational State of)",
+    "value": "BO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BQ (Bonaire, Sint Eustatius and Saba)",
+    "value": "BQ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BA (Bosnia and Herzegovina)",
+    "value": "BA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BW (Botswana)",
+    "value": "BW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BV (Bouvet Island)",
+    "value": "BV"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BR (Brazil)",
+    "value": "BR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IO (British Indian Ocean Territory)",
+    "value": "IO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BN (Brunei Darussalam)",
+    "value": "BN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BG (Bulgaria)",
+    "value": "BG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BF (Burkina Faso)",
+    "value": "BF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BI (Burundi)",
+    "value": "BI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CV (Cabo Verde)",
+    "value": "CV"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KH (Cambodia)",
+    "value": "KH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CM (Cameroon)",
+    "value": "CM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CA (Canada)",
+    "value": "CA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KY (Cayman Islands)",
+    "value": "KY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CF (Central African Republic)",
+    "value": "CF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TD (Chad)",
+    "value": "TD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CL (Chile)",
+    "value": "CL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CN (China)",
+    "value": "CN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CX (Christmas Island)",
+    "value": "CX"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CC (Cocos (Keeling) Islands)",
+    "value": "CC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CO (Colombia)",
+    "value": "CO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KM (Comoros)",
+    "value": "KM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CG (Congo)",
+    "value": "CG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CD (Congo, The Democratic Republic of the)",
+    "value": "CD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CK (Cook Islands)",
+    "value": "CK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CR (Costa Rica)",
+    "value": "CR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "HR (Croatia)",
+    "value": "HR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CU (Cuba)",
+    "value": "CU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CW (Cura\u00e7ao)",
+    "value": "CW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CY (Cyprus)",
+    "value": "CY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CZ (Czechia)",
+    "value": "CZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CI (C\u00f4te d'Ivoire)",
+    "value": "CI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "DK (Denmark)",
+    "value": "DK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "DJ (Djibouti)",
+    "value": "DJ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "DM (Dominica)",
+    "value": "DM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "DO (Dominican Republic)",
+    "value": "DO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "EC (Ecuador)",
+    "value": "EC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "EG (Egypt)",
+    "value": "EG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SV (El Salvador)",
+    "value": "SV"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GQ (Equatorial Guinea)",
+    "value": "GQ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ER (Eritrea)",
+    "value": "ER"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "EE (Estonia)",
+    "value": "EE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SZ (Eswatini)",
+    "value": "SZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ET (Ethiopia)",
+    "value": "ET"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "FK (Falkland Islands (Malvinas))",
+    "value": "FK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "FO (Faroe Islands)",
+    "value": "FO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "FJ (Fiji)",
+    "value": "FJ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "FI (Finland)",
+    "value": "FI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "FR (France)",
+    "value": "FR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GF (French Guiana)",
+    "value": "GF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PF (French Polynesia)",
+    "value": "PF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TF (French Southern Territories)",
+    "value": "TF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GA (Gabon)",
+    "value": "GA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GM (Gambia)",
+    "value": "GM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GE (Georgia)",
+    "value": "GE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "DE (Germany)",
+    "value": "DE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GH (Ghana)",
+    "value": "GH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GI (Gibraltar)",
+    "value": "GI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GR (Greece)",
+    "value": "GR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GL (Greenland)",
+    "value": "GL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GD (Grenada)",
+    "value": "GD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GP (Guadeloupe)",
+    "value": "GP"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GU (Guam)",
+    "value": "GU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GT (Guatemala)",
+    "value": "GT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GG (Guernsey)",
+    "value": "GG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GN (Guinea)",
+    "value": "GN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GW (Guinea-Bissau)",
+    "value": "GW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GY (Guyana)",
+    "value": "GY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "HT (Haiti)",
+    "value": "HT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "HM (Heard Island and McDonald Islands)",
+    "value": "HM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VA (Holy See (Vatican City State))",
+    "value": "VA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "HN (Honduras)",
+    "value": "HN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "HK (Hong Kong)",
+    "value": "HK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "HU (Hungary)",
+    "value": "HU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IS (Iceland)",
+    "value": "IS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IN (India)",
+    "value": "IN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ID (Indonesia)",
+    "value": "ID"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IR (Iran, Islamic Republic of)",
+    "value": "IR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IQ (Iraq)",
+    "value": "IQ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IE (Ireland)",
+    "value": "IE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IM (Isle of Man)",
+    "value": "IM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IL (Israel)",
+    "value": "IL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "IT (Italy)",
+    "value": "IT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "JM (Jamaica)",
+    "value": "JM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "JP (Japan)",
+    "value": "JP"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "JE (Jersey)",
+    "value": "JE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "JO (Jordan)",
+    "value": "JO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KZ (Kazakhstan)",
+    "value": "KZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KE (Kenya)",
+    "value": "KE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KI (Kiribati)",
+    "value": "KI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KP (Korea, Democratic People's Republic of)",
+    "value": "KP"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KR (Korea, Republic of)",
+    "value": "KR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KW (Kuwait)",
+    "value": "KW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KG (Kyrgyzstan)",
+    "value": "KG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LA (Lao People's Democratic Republic)",
+    "value": "LA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LV (Latvia)",
+    "value": "LV"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LB (Lebanon)",
+    "value": "LB"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LS (Lesotho)",
+    "value": "LS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LR (Liberia)",
+    "value": "LR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LY (Libya)",
+    "value": "LY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LI (Liechtenstein)",
+    "value": "LI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LT (Lithuania)",
+    "value": "LT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LU (Luxembourg)",
+    "value": "LU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MO (Macao)",
+    "value": "MO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MG (Madagascar)",
+    "value": "MG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MW (Malawi)",
+    "value": "MW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MY (Malaysia)",
+    "value": "MY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MV (Maldives)",
+    "value": "MV"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ML (Mali)",
+    "value": "ML"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MT (Malta)",
+    "value": "MT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MH (Marshall Islands)",
+    "value": "MH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MQ (Martinique)",
+    "value": "MQ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MR (Mauritania)",
+    "value": "MR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MU (Mauritius)",
+    "value": "MU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "YT (Mayotte)",
+    "value": "YT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MX (Mexico)",
+    "value": "MX"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "FM (Micronesia, Federated States of)",
+    "value": "FM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MD (Moldova, Republic of)",
+    "value": "MD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MC (Monaco)",
+    "value": "MC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MN (Mongolia)",
+    "value": "MN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ME (Montenegro)",
+    "value": "ME"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MS (Montserrat)",
+    "value": "MS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MA (Morocco)",
+    "value": "MA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MZ (Mozambique)",
+    "value": "MZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MM (Myanmar)",
+    "value": "MM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NA (Namibia)",
+    "value": "nan"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NR (Nauru)",
+    "value": "NR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NP (Nepal)",
+    "value": "NP"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NL (Netherlands)",
+    "value": "NL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NC (New Caledonia)",
+    "value": "NC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NZ (New Zealand)",
+    "value": "NZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NI (Nicaragua)",
+    "value": "NI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NE (Niger)",
+    "value": "NE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NG (Nigeria)",
+    "value": "NG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NU (Niue)",
+    "value": "NU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NF (Norfolk Island)",
+    "value": "NF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MK (North Macedonia)",
+    "value": "MK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MP (Northern Mariana Islands)",
+    "value": "MP"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "NO (Norway)",
+    "value": "NO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "OM (Oman)",
+    "value": "OM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PK (Pakistan)",
+    "value": "PK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PW (Palau)",
+    "value": "PW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PS (Palestine, State of)",
+    "value": "PS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PA (Panama)",
+    "value": "PA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PG (Papua New Guinea)",
+    "value": "PG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PY (Paraguay)",
+    "value": "PY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PE (Peru)",
+    "value": "PE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PH (Philippines)",
+    "value": "PH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PN (Pitcairn)",
+    "value": "PN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PL (Poland)",
+    "value": "PL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PT (Portugal)",
+    "value": "PT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PR (Puerto Rico)",
+    "value": "PR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "QA (Qatar)",
+    "value": "QA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "RO (Romania)",
+    "value": "RO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "RU (Russian Federation)",
+    "value": "RU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "RW (Rwanda)",
+    "value": "RW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "RE (R\u00e9union)",
+    "value": "RE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "BL (Saint Barth\u00e9lemy)",
+    "value": "BL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SH (Saint Helena, Ascension and Tristan da Cunha)",
+    "value": "SH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "KN (Saint Kitts and Nevis)",
+    "value": "KN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LC (Saint Lucia)",
+    "value": "LC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "MF (Saint Martin (French part))",
+    "value": "MF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "PM (Saint Pierre and Miquelon)",
+    "value": "PM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VC (Saint Vincent and the Grenadines)",
+    "value": "VC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "WS (Samoa)",
+    "value": "WS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SM (San Marino)",
+    "value": "SM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ST (Sao Tome and Principe)",
+    "value": "ST"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SA (Saudi Arabia)",
+    "value": "SA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SN (Senegal)",
+    "value": "SN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "RS (Serbia)",
+    "value": "RS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SC (Seychelles)",
+    "value": "SC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SL (Sierra Leone)",
+    "value": "SL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SG (Singapore)",
+    "value": "SG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SX (Sint Maarten (Dutch part))",
+    "value": "SX"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SK (Slovakia)",
+    "value": "SK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SI (Slovenia)",
+    "value": "SI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SB (Solomon Islands)",
+    "value": "SB"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SO (Somalia)",
+    "value": "SO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ZA (South Africa)",
+    "value": "ZA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GS (South Georgia and the South Sandwich Islands)",
+    "value": "GS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SS (South Sudan)",
+    "value": "SS"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ES (Spain)",
+    "value": "ES"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "LK (Sri Lanka)",
+    "value": "LK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SD (Sudan)",
+    "value": "SD"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SR (Suriname)",
+    "value": "SR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SJ (Svalbard and Jan Mayen)",
+    "value": "SJ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SE (Sweden)",
+    "value": "SE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "CH (Switzerland)",
+    "value": "CH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "SY (Syrian Arab Republic)",
+    "value": "SY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TW (Taiwan, Province of China)",
+    "value": "TW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TJ (Tajikistan)",
+    "value": "TJ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TZ (Tanzania, United Republic of)",
+    "value": "TZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TH (Thailand)",
+    "value": "TH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TL (Timor-Leste)",
+    "value": "TL"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TG (Togo)",
+    "value": "TG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TK (Tokelau)",
+    "value": "TK"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TO (Tonga)",
+    "value": "TO"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TT (Trinidad and Tobago)",
+    "value": "TT"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TN (Tunisia)",
+    "value": "TN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TR (Turkey)",
+    "value": "TR"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TM (Turkmenistan)",
+    "value": "TM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TC (Turks and Caicos Islands)",
+    "value": "TC"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "TV (Tuvalu)",
+    "value": "TV"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "UG (Uganda)",
+    "value": "UG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "UA (Ukraine)",
+    "value": "UA"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AE (United Arab Emirates)",
+    "value": "AE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "GB (United Kingdom)",
+    "value": "GB"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "US (United States)",
+    "value": "US"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "UM (United States Minor Outlying Islands)",
+    "value": "UM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "UY (Uruguay)",
+    "value": "UY"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "UZ (Uzbekistan)",
+    "value": "UZ"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VU (Vanuatu)",
+    "value": "VU"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VE (Venezuela, Bolivarian Republic of)",
+    "value": "VE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VN (Viet Nam)",
+    "value": "VN"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VG (Virgin Islands, British)",
+    "value": "VG"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "VI (Virgin Islands, U.S.)",
+    "value": "VI"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "WF (Wallis and Futuna)",
+    "value": "WF"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "EH (Western Sahara)",
+    "value": "EH"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "YE (Yemen)",
+    "value": "YE"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ZM (Zambia)",
+    "value": "ZM"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "ZW (Zimbabwe)",
+    "value": "ZW"
+  },
+  {
+    "dropdown_name": "ISO2",
+    "label": "AX (\u00c5land Islands)",
+    "value": "AX"
+  }
+]
